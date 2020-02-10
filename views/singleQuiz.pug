@@ -1,0 +1,15 @@
+html
+	head
+		title Single Quiz
+		
+body
+	div#main
+		each item in quiz
+			p Creator Name: #{item.creatorName}
+			p Tags: #{item.tags}
+			p Questions:
+				br
+				each question in item.questions
+					a(href='/questions/' + question._id) #{question.question}
+					br
+				

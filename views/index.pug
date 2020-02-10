@@ -1,0 +1,43 @@
+html
+	head Create Quiz
+		title Create Quiz
+		
+body(onload="questions()")
+	div
+		br
+		button#saveQuiz(type="button" onclick="saveQuiz()") Save Quiz
+		br
+		
+		br
+		label(for='creator') Creator Name: 
+		input#creator(type = 'textbox')
+		br
+		
+		br
+		label(for='tags') Tags:
+		input#tags(type = 'textbox')
+		br
+		
+		p Added Questions:
+			p#addedQuestions
+		
+		p Search/Add Questions 
+			p Difficulty:
+				select(onchange="questions()")#difficulty
+					option All
+					each diff in difficulty
+						option= diff
+			
+			p Category:
+				select(onchange="questions()")#category
+					option All
+					each categ in category
+						option= categ
+		
+		p Questions:
+			p#questions
+			
+			
+		script(src='http://localhost:3000/createQuiz.js')
+		
+		

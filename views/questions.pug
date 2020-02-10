@@ -1,0 +1,9 @@
+html
+	head Requested Questions
+		title Questions
+		
+body
+	div#main
+		each question, index in questions
+			a(href='/questions/' + question._id) question #{index+1}
+			br

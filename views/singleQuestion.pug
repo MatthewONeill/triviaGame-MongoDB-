@@ -1,0 +1,18 @@
+html
+	head
+		title Single Question
+		
+body
+	div#main
+		each questions in question
+			p Question: #{questions.question}
+			br
+			p Category: #{questions.category}
+			br
+			p Difficulty: #{questions.difficulty}
+			br
+			p Correct Answer: #{questions.correct_answer}
+			br
+			p Incorrect Answers:
+			each incorrect in questions.incorrect_answers
+				p #{incorrect}
